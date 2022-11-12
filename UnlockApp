@@ -1,4 +1,4 @@
-hostname =app.bilibili.com, vsco.co,www.google.*,api.revenuecat.com, *.adobe.*, photos.adobe.io, commerce-api.faceu.mobi,  mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net,api-chn.rthdo.com,m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, www.40sishi.com,buy.itunes.apple.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com，api.picsart.c*, api.meiease.c*，*.gotokeep.com，guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com，p.du.163.com,
+hostname =app.bilibili.com,api.bspapp.com,vsco.co,appwk.baidu.com,www.google.*,api.revenuecat.com, *.adobe.*, photos.adobe.io, commerce-api.faceu.mobi,  mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net,api-chn.rthdo.com,m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, www.40sishi.com,buy.itunes.apple.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com，api.picsart.c*, api.meiease.c*，*.gotokeep.com，guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com，p.du.163.com,
 
 # 哔哩哔哩番剧开启1080P+ （by NobyDa）   #hostname=api.bilibili.com, app.bilibili.com,
 ^https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) url script-response-body https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/backup/bilifj.js
@@ -85,6 +85,14 @@ https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-bo
 
 # > Hyperweb        #hostname =   zy6kcqa01a.execute-api.us-east-2.amazonaws.com
 ^https://zy6kcqa01a.execute-api.us-east-2.amazonaws.com/prod/verifyReceipt url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/Hyperweb.js
+
+# ～ 趣听音乐☆自动激活APP（2022-10-26）@ddgksf2013
+##hostname=api.bspapp.com
+^https?:\/\/api\.bspapp\.com\/client$ url script-response-body https://raw.githubusercontent.com/chenxisini/rewrite/main/listen.js
+
+# ～ 百度文库☆解锁VIP文档阅读权限（2022-10-17）@ddgksf2013   
+##hostname=appwk.baidu.com
+^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo url script-response-body https://raw.githubusercontent.com/chenxisini/rewrite/main/baidulibrary.js
 
 
 # google 翻页 (senku)
