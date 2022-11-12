@@ -1,4 +1,4 @@
-hostname =app.bilibili.com,api.live.bilibili.com ,api.vc.bilibili.com  ,api.bilibili.com  ,manga.bilibili.com  ,grpc.biliapi.net, api.biliapi.net , -broadcast.chat.bilibili.com  ,-*cdn*.biliapi.net , -*tracker*.biliapi.net,api.bspapp.com,vsco.co,appwk.baidu.com,www.google.*,api.revenuecat.com, *.adobe.*, photos.adobe.io, commerce-api.faceu.mobi,  mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net,api-chn.rthdo.com,m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, www.40sishi.com,buy.itunes.apple.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com，api.picsart.c*, api.meiease.c*，*.gotokeep.com，guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com，p.du.163.com,
+hostname =api.bjxkhc.com,app.bilibili.com,api.live.bilibili.com ,api.vc.bilibili.com  ,api.bilibili.com  ,manga.bilibili.com  ,grpc.biliapi.net, api.biliapi.net , -broadcast.chat.bilibili.com  ,-*cdn*.biliapi.net , -*tracker*.biliapi.net,api.bspapp.com,vsco.co,appwk.baidu.com,www.google.*,api.revenuecat.com, *.adobe.*, photos.adobe.io, commerce-api.faceu.mobi,  mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net,api-chn.rthdo.com,m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, www.40sishi.com,buy.itunes.apple.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com，api.picsart.c*, api.meiease.c*，*.gotokeep.com，guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com，p.du.163.com,
 
 #!name=哔哩哔哩去广告
 #～BiliBili_哔哩哔哩_屏蔽IP请求@ddgksf2013
@@ -142,9 +142,11 @@ https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-bo
 # > Hyperweb        #hostname =   zy6kcqa01a.execute-api.us-east-2.amazonaws.com
 ^https://zy6kcqa01a.execute-api.us-east-2.amazonaws.com/prod/verifyReceipt url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/Hyperweb.js
 
-# ～ 趣听音乐☆自动激活APP（2022-10-26）@ddgksf2013
-##hostname=api.bspapp.com
-^https?:\/\/api\.bspapp\.com\/client$ url script-response-body https://raw.githubusercontent.com/chenxisini/rewrite/main/listen.js
+#!desc=爱美剧解锁部分功能+去广告  api.bjxkhc.com
+^https?:\/\/api.bjxkhc.com\/index\.php\/app\/ios\/(vod\/show|(user|vod|topic|type)\/index) url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/aimeiju.js
+^https?://api.bjxkhc.com/index.php/app/ios/ads/index url reject-dict
+^https?://api.bjxkhc.com/index.php/app/ios/ver/index_ios$ url reject
+^https?://api.bjxkhc.com/index.php/app/ios/pay/ok$ url reject-dict
 
 # ～ 百度文库☆解锁VIP文档阅读权限（2022-10-17）@ddgksf2013   
 ##hostname=appwk.baidu.com
