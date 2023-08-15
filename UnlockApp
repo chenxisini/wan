@@ -1,5 +1,4 @@
-hostname =api.bjxkhc.com,api.bspapp.com,vsco.co,appwk.baidu.com,www.google.*,api.revenuecat.com, *.adobe.*, photos.adobe.io, commerce-api.faceu.mobi,  mb3admin.com, mobile-api.adguard.com,account.wps.cn,api.vuevideo.net,api-chn.rthdo.com,m*.bybutter.com,api.polaxiong.com,bmall.camera360.com,spclient.wg.spotify.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, www.40sishi.com,buy.itunes.apple.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com，api.picsart.c*, api.meiease.c*，*.gotokeep.com，guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com，p.du.163.com,
-
+hostname =api.bjxkhc.com,api.bspapp.com,vsco.co,appwk.baidu.com,www.google.*,api.revenuecat.com, *.adobe.*, photos.adobe.io, commerce-api.faceu.mobi,account.wps.cn,spclient.wg.spotify.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, www.40sishi.com,buy.itunes.apple.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com，api.picsart.c*, api.meiease.c*，*.gotokeep.com，guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com，
 
 
 # keep解锁会员    #hostname = *.gotokeep.com
@@ -18,10 +17,6 @@ https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-bo
 #去除微信公众号文章底部广告   #hostname= mp.weixin.qq.com
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
 
-#酷我音乐去开屏广告     #hostname=rich.kuwo.cn,*.kwcdn.kuwo.cn,mobilead.kuwo.cn
-^https?:\/\/rich\.kuwo\.cn\/AdService\/kaiping\/.+ url reject
-^https?:\/\/.+\.kwcdn\.kuwo\.cn\/star\/upload\/.+ url reject
-^https?:\/\/mobilead\.kuwo\.cn\/EcomResourceServer\/adBubble\/.+ url reject
 
 # > VSCO 解锁高级特权   #hostname = vsco.co, api.revenuecat.com,
 ^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/ url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js
@@ -39,32 +34,8 @@ https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-bo
 ^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/ulike.js
 ^https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/caiyun_svip.js
 
-#网易蜗牛读书 解锁特权     #hostname= p.du.163.com
-^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info\.json url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/wnyd.js
-
-# > Emby解锁     #hostname = mb3admin.com
-^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) url script-echo-response https://raw.githubusercontent.com/iEwha/Profiles/master/Script/EmbyPremiere.js
-
-# > Adguard        #hostname =  mobile-api.adguard.com
-^https:\/\/mobile-api\.adguard\.com\/api\/1\.0\/ios_validate_receipt$ url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/adguard.js
-
 # > WPS解锁  超级会员、wps会员、稻壳会员 (By eHpo)    #hostname = account.wps.cn
 ^https://account.wps.*/api/users/ url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js
-
-# > VUE Pro  #hostname = api.vuevideo.net
-^https:\/\/api\.vuevideo\.net\/api\/v1\/(users\/.+\/profile|subtitle\/prepare) url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/VUE.js
-
-# > 小影 解锁高级功能     #hostname = api-chn.rthdo.com
-^https:\/\/api-chn\.rthdo\.com\/api\/rest\/u\/vipVerifyReceipt url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/vivavideo.js
-
-# > NiChi 解锁素材    #hostname = m*.bybutter.com
-^https?:\/\/m(p|ini-hk)\.bybutter\.com\/mood\/(official-templates|privileges) url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/NiChi.js
-
-# > 泼辣修图 解锁高级特权 (需恢复购买)    #hostname = api.polaxiong.com
-^https:\/\/api\.polaxiong\.com\/v1\/payments\/appleiap\/receipts\/confirmation url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Polarr.js
-
-# > MIX 解锁高级特权 (需恢复购买)        #hostname = bmall.camera360.com
-^https?:\/\/bmall\.camera360\.com\/api\/mix\/recovery url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/mix.js
 
 #  部分解锁premium 需iOS15 ,建议重新登录,音质不能设置为超高      #hostname = spclient.wg.spotify.com
 # 1. 搜索界面 歌单/歌曲可以随意切换完全播放  2. 音乐库已点赞歌曲随意切换完全播放
