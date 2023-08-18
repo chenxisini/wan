@@ -1,4 +1,4 @@
-hostname =api.bjxkhc.com,api.bspapp.com,vsco.co,appwk.baidu.com,www.google.*,api.revenuecat.com, *.adobe.*, photos.adobe.io, commerce-api.faceu.mobi,account.wps.cn,spclient.wg.spotify.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, www.40sishi.com,buy.itunes.apple.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com，api.picsart.c*, api.meiease.c*，*.gotokeep.com，guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com，
+hostname =api.bspapp.com,vsco.co,appwk.baidu.com,www.google.*,api.revenuecat.com, *.adobe.*, photos.adobe.io, commerce-api.faceu.mobi,account.wps.cn,spclient.wg.spotify.com,baimiao.uzero.cn, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, www.40sishi.com,buy.itunes.apple.com, zy6kcqa01a.execute-api.us-east-2.amazonaws.com，api.picsart.c*, api.meiease.c*，*.gotokeep.com，guide-acs.m.taobao.com,pan.baidu.com,weixin110.qq.com,mp.weixin.qq.com，
 
 
 # keep解锁会员    #hostname = *.gotokeep.com
@@ -55,13 +55,6 @@ https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-bo
 
 # > Hyperweb        #hostname =   zy6kcqa01a.execute-api.us-east-2.amazonaws.com
 ^https://zy6kcqa01a.execute-api.us-east-2.amazonaws.com/prod/verifyReceipt url script-response-body https://raw.githubusercontent.com/iEwha/Profiles/master/Script/Hyperweb.js
-
-#!desc=爱美剧解锁部分功能+去广告  api.bjxkhc.com
-^https?:\/\/api.bjxkhc.com\/index\.php\/app\/ios\/(vod\/show|(user|vod|topic|type)\/index) url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/aimeiju.js
-^https?://api.bjxkhc.com/index.php/app/ios/ads/index url reject-dict
-^https?://api.bjxkhc.com/index.php/app/ios/ver/index_ios$ url reject
-^https?://api.bjxkhc.com/index.php/app/ios/pay/ok$ url reject-dict
-
 # ～ 百度文库☆解锁VIP文档阅读权限（2022-10-17）@ddgksf2013   
 ##hostname=appwk.baidu.com
 ^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo url script-response-body https://github.com/deezertidal/private/raw/master/js-backup/Crack/baidulibrary.js
